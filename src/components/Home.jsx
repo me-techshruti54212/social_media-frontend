@@ -109,7 +109,7 @@ setFilelength(0)
         <div className="flex flex-col gap-12 w-[85%] items-center ">
           <h2 className="font-semibold text-4xl text-center">Welcome !</h2>
           {error && <p className="text-red-500">{error}</p>}
-          <form className="flex flex-col gap-6" onSubmit={handleLogin}>
+          <form className="flex flex-col gap-6" onSubmit={handleLogin}  encType="multipart/form-data">
             <div className="flex items-center gap-6 border border-black rounded-2xl px-8 py-1 w-[100%] relative">
               <BsPersonFill
                 size={32}
