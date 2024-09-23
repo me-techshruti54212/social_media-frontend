@@ -4,7 +4,7 @@ import { BsPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { io } from "socket.io-client";
 
-const socket = io(process.env.REACT_APP_BACKEND_URL, {
+const socket = io("wss://social-media-backend-two-murex.vercel.app/", {
   withCredentials: true,
   transports: ['websocket']
 });
