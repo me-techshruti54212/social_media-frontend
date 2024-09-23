@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { io } from "socket.io-client";
 
 const socket = io(process.env.REACT_APP_BACKEND_URL, {
-  withCredentials: true
+  withCredentials: true,
+  transports: ['websocket']
 });
 
 function convertBase64ToImage(base64String) {
