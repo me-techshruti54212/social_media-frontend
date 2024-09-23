@@ -78,8 +78,8 @@ const Admin = () => {
               <div className="flex gap-8">
             {oneuser.images.map((img, i) => (
               <div key={i}>
-              <a href={convertBase64ToImage(img)}  target="_blank" >
-                <img src={convertBase64ToImage(img)} className="h-[100px] w-[100px]" />
+              <a href={convertBase64ToImage(img)}  rel="noreferrer" target="_blank" >
+                <img src={convertBase64ToImage(img)}  alt="image-uploaded" className="h-[100px] w-[100px]" />
                 </a>
               </div>
             ))}

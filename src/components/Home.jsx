@@ -172,7 +172,7 @@ setFilelength(0)
               <label htmlFor="choose-img"
                 className={`font-semibold text-xl absolute left-20 transition duration-200  bg-[#f5f5f5] `}
               >
-               {filelength==0? "Choose Images": `${filelength} files chosen`}
+               {filelength===0? "Choose Images": `${filelength} files chosen`}
               </label>
             </div>
        
