@@ -2,10 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 import { io } from "socket.io-client";
 
-const socket = io("https://social-media-backend-two-murex.vercel.app/", {
+const socket = io(process.env.REACT_APP_BACKEND_URL, {
   withCredentials: true
 });
 
@@ -39,7 +38,7 @@ const Admin = () => {
   const [userdata, setUserData] = useState([]);
   useEffect(() => {
     async function getUserdata() {
-      await axios.get("https://social-media-backend-two-murex.vercel.app/getuserdata").then(({ data }) => {
+      await axios.get(`${process.env.REACT_APP_BACKEND_URL}/getuserdata`).then(({ data }) => {
         if (data.success) {
           setUserData(data.userdata);
           console.log(data.userdata);

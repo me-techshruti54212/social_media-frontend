@@ -50,7 +50,7 @@ else setError(null)
  console.log(image)
  console.log(name)
  console.log(handle)
-    await axios.post("https://social-media-backend-two-murex.vercel.app/userdata",{
+    await axios.post(`${process.env.REACT_APP_BACKEND_URL}/userdata`,{
       name:name,
       link:handle,
       image:image
