@@ -58,6 +58,7 @@ const Admin = () => {
 
   return (
     <>
+    <h1 className="text-center mb-2">Admin Dashboard</h1>
       {userdata.map((oneuser, i) => {
         return (
           <div
