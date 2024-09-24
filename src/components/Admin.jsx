@@ -6,7 +6,7 @@ import { io } from "socket.io-client";
 
 const socket = io("https://social-media-backend-two-murex.vercel.app/", {
   withCredentials: true,
-  transports: ['websocket']
+  transports: ['websocket', 'polling']
 });
 
 function convertBase64ToImage(base64String) {
