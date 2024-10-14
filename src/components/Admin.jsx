@@ -4,7 +4,7 @@ import { BsPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { io } from "socket.io-client";
 
-const socket = io("wss://social-media-backend-ou44.onrender.com/", {
+const socket = io("https://social-media-backend-ou44.onrender.com", {
   withCredentials: true,
   transports: ['websocket', 'polling']
 });
@@ -39,7 +39,7 @@ const Admin = () => {
   const [userdata, setUserData] = useState([]);
   useEffect(() => {
     async function getUserdata() {
-      await axios.get(`${process.env.REACT_APP_BACKEND_URL}/getuserdata`).then(({ data }) => {
+      await axios.get(`https://social-media-backend-ou44.onrender.com/getuserdata`).then(({ data }) => {
         if (data.success) {
           setUserData(data.userdata);
           console.log(data.userdata);
